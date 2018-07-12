@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface BankInterface {
+public interface Ibank {
 	void checkInfo();
 	
 	void giveCredit();

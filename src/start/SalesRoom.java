@@ -1,26 +1,26 @@
 package start;
 import java.util.ArrayList;
 
-import interfaces.DepartmentInterface;
-import interfaces.VisitorInterface;
+import interfaces.Idepartment;
+import interfaces.Ivisitor;
 
 public class SalesRoom {
 
     public static final String SHOP_NAME = "technodom";
 
-    private ArrayList<DepartmentInterface> departmentList = new ArrayList<DepartmentInterface>();// в каждом департаменте имеются свои сотрудники
+    private ArrayList<Idepartment> departmentList = new ArrayList<Idepartment>();// в каждом департаменте имеются свои сотрудники
 
-    private ArrayList<VisitorInterface> visitorList = new ArrayList<VisitorInterface>();
+    private ArrayList<Ivisitor> visitorList = new ArrayList<Ivisitor>();
 
-    public ArrayList<DepartmentInterface> getDepartmentList() {
+    public ArrayList<Idepartment> getDepartmentList() {
         return departmentList;
     }
 
-    public void addDepartment(DepartmentInterface department){
+    public void addDepartment(Idepartment department){
         departmentList.add(department);
     }
 
-    public void addVisitor(VisitorInterface visitor){
+    public void addVisitor(Ivisitor visitor){
         visitorList.add(visitor);
     }
 

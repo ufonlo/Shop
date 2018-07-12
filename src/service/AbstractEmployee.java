@@ -1,9 +1,9 @@
 package service;
 
-import interfaces.DepartmentInterface;
-import interfaces.EmployeeInterface;
+import interfaces.Idepartment;
+import interfaces.Iemployee;
 
-public abstract class AbstractEmployee implements EmployeeInterface {
+public abstract class AbstractEmployee implements Iemployee {
 
     public AbstractEmployee() {
     }
@@ -13,7 +13,7 @@ public abstract class AbstractEmployee implements EmployeeInterface {
     }
 
     private String name;
-    private DepartmentInterface department;
+    private Idepartment department;
     private boolean free;
 
     @Override
@@ -26,12 +26,12 @@ public abstract class AbstractEmployee implements EmployeeInterface {
     }
 
     @Override
-    public DepartmentInterface getDepartment() {
+    public Idepartment getDepartment() {
         return department;
     }
 
     @Override
-    public void setDepartment(DepartmentInterface department) {
+    public void setDepartment(Idepartment department) {
         this.department = department;
     }
 

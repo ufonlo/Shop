@@ -1,15 +1,15 @@
 package department;
 import java.util.ArrayList;
 
-import interfaces.DepartmentInterface;
-import interfaces.EmployeeInterface;
-import interfaces.GoodsInterface;
+import interfaces.Idepartment;
+import interfaces.Iemployee;
+import interfaces.Igoods;
 
 
 import java.util.ArrayList;
 
 
-public abstract class AbstractDepartment implements DepartmentInterface{
+public abstract class AbstractDepartment implements Idepartment{
 
     public AbstractDepartment() {
     }
@@ -19,8 +19,8 @@ public abstract class AbstractDepartment implements DepartmentInterface{
     }
 
     private String name;
-    private ArrayList<EmployeeInterface> employeeList = new ArrayList<EmployeeInterface>();
-    private ArrayList<GoodsInterface> goodsList = new ArrayList<GoodsInterface>();
+    private ArrayList<Iemployee> employeeList = new ArrayList<Iemployee>();
+    private ArrayList<Igoods> goodsList = new ArrayList<Igoods>();
 
     @Override
     public String getName() {
@@ -32,29 +32,29 @@ public abstract class AbstractDepartment implements DepartmentInterface{
     }
 
     @Override
-    public ArrayList<EmployeeInterface> getEmployeeList() {
+    public ArrayList<Iemployee> getEmployeeList() {
         return employeeList;
     }
 
-    public void setEmployeeList(ArrayList<EmployeeInterface> employeeList) {
+    public void setEmployeeList(ArrayList<Iemployee> employeeList) {
         this.employeeList = employeeList;
     }
 
     @Override
-    public ArrayList<GoodsInterface> getGoodsList() {
+    public ArrayList<Igoods> getGoodsList() {
         return goodsList;
     }
 
-    public void setGoodsList(ArrayList<GoodsInterface> goodsList) {
+    public void setGoodsList(ArrayList<Igoods> goodsList) {
         this.goodsList = goodsList;
     }
 
-    public void addEmployee(EmployeeInterface employee){
+    public void addEmployee(Iemployee employee){
         employee.setDepartment(this);
         employeeList.add(employee);
     }
 
-    public void addGoods(GoodsInterface goods){
+    public void addGoods(Igoods goods){
         goods.setDepartment(this);// при добавлении товара для него автометически прописывается департамент
         goodsList.add(goods);
     }

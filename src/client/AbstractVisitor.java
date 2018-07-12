@@ -1,10 +1,10 @@
 package client;
 
 import goods.Televisor;
-import interfaces.GoodsInterface;
-import interfaces.VisitorInterface;
+import interfaces.Igoods;
+import interfaces.Ivisitor;
 
-public abstract class AbstractVisitor implements VisitorInterface {
+public abstract class AbstractVisitor implements Ivisitor {
 
     private String name;
 
@@ -16,14 +16,14 @@ public abstract class AbstractVisitor implements VisitorInterface {
     }
 
     @Override
-    public void buy(GoodsInterface goods){
+    public void buy(Igoods goods){
         System.out.println("buy "+goods.getName());
     }
 
 
 
     @Override
-    public void returnGoods(GoodsInterface goods){
+    public void returnGoods(Igoods goods){
 
     }
 

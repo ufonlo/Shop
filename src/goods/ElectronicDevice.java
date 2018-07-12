@@ -1,9 +1,9 @@
 package goods;
 
-import interfaces.DepartmentInterface;
-import interfaces.ElectronicDeviceInterface;
+import interfaces.Idepartment;
+import interfaces.IelectronicDevice;
 
-public class ElectronicDevice extends AbstractGoods implements ElectronicDeviceInterface{
+public class ElectronicDevice extends AbstractGoods implements IelectronicDevice{
 
 
     public ElectronicDevice() {
@@ -28,7 +28,7 @@ public class ElectronicDevice extends AbstractGoods implements ElectronicDeviceI
     }
 
 	@Override
-	public void setDepartment(DepartmentInterface department) {
+	public void setDepartment(Idepartment department) {
 		// TODO Auto-generated method stub	
 	}
 }

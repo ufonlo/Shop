@@ -1,10 +1,10 @@
 package goods;
 
 import department.AbstractDepartment;
-import interfaces.DepartmentInterface;
-import interfaces.GoodsInterface;
+import interfaces.Idepartment;
+import interfaces.Igoods;
 
-public abstract class AbstractGoods implements GoodsInterface {
+public abstract class AbstractGoods implements Igoods {
 
     public static final int DEFAULT_GUARANTEE = 2;
 
@@ -29,7 +29,7 @@ public abstract class AbstractGoods implements GoodsInterface {
 
     private String name;
 
-    private DepartmentInterface department;
+    private Idepartment department;
 
     private String company;
 
@@ -62,12 +62,12 @@ public abstract class AbstractGoods implements GoodsInterface {
     }
 
     @Override
-    public DepartmentInterface getDepartment() {
+    public Idepartment getDepartment() {
         return department;
     }
 
     @Override
-    public void setDepartment(DepartmentInterface department) {
+    public void setDepartment(Idepartment department) {
         this.department = department;
     }
 

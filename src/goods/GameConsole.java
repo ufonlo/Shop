@@ -1,5 +1,5 @@
 package goods;
-import interfaces.DepartmentInterface;
+import interfaces.Idepartment;
 
 public class GameConsole extends ElectronicDevice{
 

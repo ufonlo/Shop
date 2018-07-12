@@ -1,7 +1,7 @@
 package service;
 
-import interfaces.DepartmentInterface;
-import interfaces.EmployeeInterface;
+import interfaces.Idepartment;
+import interfaces.Iemployee;
 import start.SalesRoom;
 
 public class Administrator {
@@ -12,8 +12,8 @@ public class Administrator {
         this.salesRoom = salesRoom;
     }
 
-    public Consultant getFreeConsultant(DepartmentInterface departmentInterface){
-        for (EmployeeInterface employee : departmentInterface.getEmployeeList()){
+    public Consultant getFreeConsultant(Idepartment departmentInterface){
+        for (Iemployee employee : departmentInterface.getEmployeeList()){
             if (employee instanceof Consultant){
                 if (employee.isFree()){
                     return (Consultant)employee;

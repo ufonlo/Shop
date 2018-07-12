@@ -1,7 +1,7 @@
 package bank;
-import interfaces.BankInterface;
+import interfaces.Ibank;
 
-public abstract class AbstractBank implements BankInterface {
+public abstract class AbstractBank implements Ibank {
 
     // количество заявок по всем банкам (можно также реализовать через коллекцию)
     public static int requestCount;

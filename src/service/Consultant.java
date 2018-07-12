@@ -1,6 +1,6 @@
 package service;
 
-import interfaces.VisitorInterface;
+import interfaces.Ivisitor;
 
 public class Consultant extends AbstractEmployee {
 
@@ -11,7 +11,7 @@ public class Consultant extends AbstractEmployee {
         super(name);
     }
 
-    public ConsultResult consult(VisitorInterface visitor){
+    public ConsultResult consult(Ivisitor visitor){
         super.setFree(false);
 
         // здесь должна быть логика, купит или пойдет домой

@@ -1,6 +1,6 @@
 package client;
 
-import interfaces.GoodsInterface;
+import interfaces.Igoods;
 
 public class VipVisitor extends AbstractVisitor {
 
@@ -17,7 +17,7 @@ public class VipVisitor extends AbstractVisitor {
     private float discount;
 
     @Override
-    public void buy(GoodsInterface goods) {
+    public void buy(Igoods goods) {
         if (!checkDiscount()) {
             super.buy(goods);
         }else{
